@@ -4,7 +4,7 @@
 APPNAME=$1
 
 if [ -z "${APPNAME}" ]; then
-  APPNAME=ubuntu
+  APPNAME=rebatedog
 fi
 
 mkdir -p /usr/lib/lua/luci/view/${APPNAME}

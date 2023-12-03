@@ -7,7 +7,7 @@ module("luci.controller.rebatedog", package.seeall)
 
 function index()
 
-  entry({"admin", "services", "rebatedog"}, call("redirect_index"), _("rebatedog"), 30).dependent = true
+  entry({"admin", "services", "rebatedog"}, call("redirect_index"), _("Rebatedog"), 30).dependent = true
   entry({"admin", "services", "rebatedog", "pages"}, call("rebatedog_index")).leaf = true
   entry({"admin", "services", "rebatedog", "form"}, call("rebatedog_form"))
   entry({"admin", "services", "rebatedog", "submit"}, call("rebatedog_submit"))
@@ -99,7 +99,6 @@ function status_container(data)
   else
     status_value = "旺财狗 未运行"
   end
-
   local status_c1 = {
     labels = {
       {
@@ -108,11 +107,12 @@ function status_container(data)
       },
       {
         key = "访问：",
-        value = "'<a href=\"https://' + location.host + ':15888\" target=\"_blank\">旺财狗管理页</a>'"
+        value = "",
+        --value="'<a href=\"https://' + location.host + ':' + port + '\" target=\"_blank\">旺财狗管理页</a>'"
       }
 
     },
-    description = "访问链接是一个自签名的 https，需要浏览器同意才能访问！",
+    description = "请认真配置数据目录，程序运行数据都保存在您设置的数据目录中。",
     title = "服务状态"
   }
   return status_c1

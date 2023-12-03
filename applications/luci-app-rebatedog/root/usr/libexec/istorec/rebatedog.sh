@@ -1,4 +1,5 @@
 #!/bin/sh
+# Author Xiaobao(xiaobao@linkease.com)
 
 ACTION=${1}
 shift 1
@@ -37,11 +38,11 @@ do_install() {
 usage() {
   echo "usage: $0 sub-command"
   echo "where sub-command is one of:"
-  echo "      install                Install the rebatedog"
-  echo "      upgrade                Upgrade the rebatedog"
-  echo "      rm/start/stop/restart  Remove/Start/Stop/Restart the rebatedog"
-  echo "      status                 rebatedog status"
-  echo "      port                   rebatedog port"
+  echo "      install                Install the Rebatedog"
+  echo "      upgrade                Upgrade the Rebatedog"
+  echo "      rm/start/stop/restart  Remove/Start/Stop/Restart the Rebatedog"
+  echo "      status                 Rebatedog status"
+  echo "      port                   Rebatedog port"
 }
 
 case ${ACTION} in
