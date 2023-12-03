@@ -1,0 +1,4 @@
+config rebatedog
+	option 'image' 'zhaoyangguang/rebatedog:latest'
+	option 'data_path' ''
+	option 'port' '15888'
