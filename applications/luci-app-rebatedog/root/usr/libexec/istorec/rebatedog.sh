@@ -20,9 +20,9 @@ do_install() {
   local cmd="docker run --restart=unless-stopped -d \
     --dns=172.17.0.1 \
     --dns=114.114.114.114 \
-	--network=host \
-	-v \"$path:/app/data\" \
-    -p ${http_port}:15888 \
+	  --network=host \
+	  -v \"$path:/app/data\" \
+    -p ${http_port}:15888 "
 
   local tz="`uci get system.@system[0].zonename`"
   [ -z "$tz" ] || cmd="$cmd -e TZ=$tz"
