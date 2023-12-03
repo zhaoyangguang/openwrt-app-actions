@@ -12,7 +12,7 @@ do_install() {
   local path=`uci get rebatedog.@rebatedog[0].data_path 2>/dev/null`
   [ -z $http_port ] || http_port=15888
 
-  get_image
+
   echo "docker pull ${IMAGE_NAME}"
   docker pull ${IMAGE_NAME}
   docker rm -f rebatedog
@@ -20,7 +20,7 @@ do_install() {
   local cmd="docker run --restart=unless-stopped -d \
     --dns=172.17.0.1 \
     --dns=114.114.114.114 \
-	  --network=host \
+ --network=host \
 	  -v \"$path:/app/data\" \
     -p ${http_port}:15888 "
 
