@@ -1,4 +1,4 @@
-msgid "rebatedog"
+msgid "Rebatedog"
 msgstr "旺财狗"
 
 msgid "The rebatedog service is running."
@@ -33,30 +33,3 @@ msgstr "存储路径（建议插入U盘或硬盘，然后输入路径。例如�
 
 msgid "Storage path could not be empty!"
 msgstr "存储路径不能为空！"
-
-msgid "Version"
-msgstr "系统版本"
-
-msgid "Port (optional)"
-msgstr "端口"
-
-msgid "Password (optional)"
-msgstr "密码"
-
-msgid "standard version"
-msgstr "标准版本"
-
-msgid "full version"
-msgstr "全量版本"
-
-msgid "UserName"
-msgstr "用户名"
-
-msgid "Password"
-msgstr "密码"
-
-msgid "LanAddress"
-msgstr "内网地址"
-
-msgid "WanAddress"
-msgstr "外网地址"
