@@ -12,7 +12,7 @@
     getHook:function(resp){
       var c1 = resp.result.schema.containers[0];
       if  (resp.result.data.container_install) {
-        c1.labels[1].value = '<a href="http://'+location.host+':'+resp.result.data.port+'" target="_blank">管理页面</a>';
+        c1.labels[1].value = '<a href="http://'+location.hostname+':'+resp.result.data.port+'" target="_blank">管理页面</a>';
       } else {
         c1.labels[1].value = "安装并运行之后，才能访问网页管理";
       }
