@@ -1,25 +1,6 @@
 <%+header%>
-
 <%+tasks/embed%>
 
-<%
-local util  = require "luci.util"
-local container_status = util.trim(util.exec("/usr/libexec/istorec/rebatedog.sh status"))
-local container_install = (string.len(container_status) > 0)
-local container_running = container_status == "running"
--%>
-
-<%
-if container_running then
-    local port=util.trim(util.exec("/usr/libexec/istorec/rebatedog.sh port"))
-    if port == "" then
-        port="15888"
-    end
--%>
-<script>
-    (function(){
-    })();
-</script>
 <div id="app">
 </div>
 
@@ -31,11 +12,11 @@ if container_running then
     getHook:function(resp){
       var c1 = resp.result.schema.containers[0];
       if  (resp.result.data.container_install) {
-        c1.labels[1].value = '<a href="http://'+location.host+':'+port+'" target="_blank">管理页面</a>';
+        c1.labels[1].value = '<a href="http://'+location.host+':'+resp.result.data.port+'" target="_blank">管理页面</a>';
       } else {
         c1.labels[1].value = "安装并运行之后，才能访问网页管理";
       }
-      // console.log("resp=", data);
+      console.log("resp=", resp);
       return resp;
     },
     submitHook:function(params){
