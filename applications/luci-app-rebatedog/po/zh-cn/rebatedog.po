@@ -1,28 +1,28 @@
 msgid "Rebatedog"
 msgstr "旺财狗"
 
-msgid "The rebatedog service is running."
+msgid "Rebatedog is running"
 msgstr "旺财狗已启动"
 
-msgid "The rebatedog service is not running."
+msgid "Rebatedog is not running"
 msgstr "旺财狗服务未启动"
 
 msgid "The rebatedog service is not installed."
 msgstr "旺财狗服务未安装"
 
-msgid "open rebatedog"
+msgid "Open Rebatedog"
 msgstr "打开旺财狗"
 
-msgid "stop rebatedog"
+msgid "Stop Rebatedog"
 msgstr "停止旺财狗"
 
-msgid "run rebatedog"
+msgid "Run Rebatedog"
 msgstr "启动旺财狗"
 
-msgid "uninstall rebatedog"
+msgid "Uninstall Rebatedog"
 msgstr "删除旺财狗"
 
-msgid "install rebatedog"
+msgid "Install Rebatedog"
 msgstr "安装旺财狗"
 
 msgid "Collecting data..."

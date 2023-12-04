@@ -1,35 +1,35 @@
 <%+header%>
 
 <%+tasks/embed%>
-
-<script>
-    (function(){
-    })();
-</script>
-<div id="app">
+<%
+local util  = require "luci.util"
+local container_status = util.trim(util.exec("/usr/libexec/istorec/rebatedog.sh status"))
+local container_install = (string.len(container_status) > 0)
+local container_running = container_status == "running"
+-%>
+<div class="cbi-value">
+    <label class="cbi-value-title"><%:Status%></label>
+    <div class="cbi-value-field">
+        <% if container_running then %>
+        <button class="cbi-button cbi-button-success" disabled="true"><%:Rebatedog is running%></button>
+        <% else %>
+        <button class="cbi-button cbi-button-negative" disabled="true"><%:Rebatedog is not running%></button>
+        <% end %>
+    </div>
 </div>
+<%
+if container_running then
+    local port=util.trim(util.exec("/usr/libexec/istorec/rebatedog.sh port"))
+    if port == "" then
+        port="15888"
+    end
+-%>
+<div class="cbi-value cbi-value-last">
+    <label class="cbi-value-title">&nbsp;</label>
+    <div class="cbi-value-field">
 
-<script>
-  window.IstoreosFormConfig = {
-    getApi:"/cgi-bin/luci/admin/services/rebatedog/form/",
-    logApi:"/cgi-bin/luci/admin/services/rebatedog/log",
-    submitApi:"/cgi-bin/luci/admin/services/rebatedog/submit",
-    getHook:function(resp){
-      var c1 = resp.result.schema.containers[0];
-      if  (resp.result.data.container_install) {
-        c1.labels[1].value = '<a href="http://'+location.host+':'+resp.result.data.port+'" target="_blank">管理页面</a>';
-      } else {
-        c1.labels[1].value = "安装并运行之后，才能访问网页管理";
-      }
-      // console.log("resp=", data);
-      return resp;
-    },
-    submitHook:function(params){
-      return params;
-    }
-  }
-</script>
-<script type="module" crossorigin src="/luci-static/iform/1.1/index.js?v=<%=math.random(1,100000)%>"></script>
-<link rel="stylesheet" href="/luci-static/iform/1.1/style.css?v=<%=math.random(1,100000)%>">
-
+    <input type="button" class="btn cbi-button cbi-button-apply" name="start" value="<%:Open Rebatedog%>" onclick="window.open('http://'+location.hostname+':<%=port%>', '_blank')">
+    </div>
+</div>
+<% end %>
 <%+footer%>
