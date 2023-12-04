@@ -14,6 +14,11 @@ define Package/luci-app-rebatedog/conffiles
 /etc/config/rebatedog
 endef
 
+define Package/luci-app-rebatedog/postinst
+#!/bin/sh
+chmod 777 /usr/libexec/istorec/rebatedog.sh
+endef
+
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
