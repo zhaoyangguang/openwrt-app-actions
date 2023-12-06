@@ -1,5 +1,5 @@
 #!/bin/sh
-# Author jjm2473@gmail.com
+# Author zhaoyangguang@gmail.com
 # Author Xiaobao(xiaobao@linkease.com)
 
 ACTION=${1}
@@ -37,11 +37,11 @@ do_install_detail() {
 
   if [ "$hostnet" = 1 ]; then
     cmd="$cmd\
-    --dns=127.0.0.1 \
+    --dns=114.114.114.114 \
     --network=host "
   else
     cmd="$cmd\
-    --dns=172.17.0.1 \
+    --dns=114.114.114.114 \
     -p $port:15888 "
   fi
 

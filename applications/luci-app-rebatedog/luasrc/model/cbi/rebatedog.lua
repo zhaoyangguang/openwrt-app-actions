@@ -22,7 +22,7 @@ s.addremove=false
 s.anonymous=true
 
 o = s:option(Flag, "hostnet", translate("Host network"), translate("Rebatedog running in host network, port is always 15888 if enabled"))
-o.default = 0
+o.default = 1
 o.rmempty = false
 
 o = s:option(Value, "port", translate("Port").."<b>*</b>")

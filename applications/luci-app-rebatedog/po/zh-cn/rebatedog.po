@@ -1,6 +1,9 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
+msgid "Rebatedog"
+msgstr "旺财狗"
+
 msgid "Official website:"
 msgstr "官方网站："
 
@@ -17,7 +20,7 @@ msgid "Host network"
 msgstr "宿主网络"
 
 msgid "Rebatedog running in host network, port is always 15888 if enabled"
-msgstr "在宿主网络运行旺财狗，如果启用则端口固定为15888"
+msgstr "在宿主网络运行（建议）旺财狗，如果启用则端口固定为15888"
 
 msgid "Service Status"
 msgstr "服务状态"
@@ -45,3 +48,6 @@ msgstr "旺财狗未运行"
 
 msgid "Open Rebatedog"
 msgstr "打开旺财狗"
+
+msgid "Important, Store database"
+msgstr "重要：数据库存储路径"
