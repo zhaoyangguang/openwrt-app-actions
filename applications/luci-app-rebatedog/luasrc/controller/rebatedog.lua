@@ -16,6 +16,13 @@ end
 
 local appname = "rebatedog"
 local page_index = {"admin", "services", "rebatedog", "pages"}
+local rebatedog_model = require "luci.model.rebatedog"
+
+local blocks = rebatedog_model.blocks()
+local home = rebatedog_model.home()
+
+local default_path = rebatedog_model.find_paths(blocks, home, "DogData")
+
 
 function redirect_index()
     http.redirect(luci.dispatcher.build_url(unpack(page_index)))
@@ -150,7 +157,7 @@ function get_data()
   local port = tonumber(uci:get_first(appname, appname, "port", "15888"))
   local data = {
     port = port,
-    data_path = uci:get_first(appname, appname, "data_path", ""),
+    data_path = uci:get_first(appname, appname, "data_path", default_path),
     image ="zhaoyangguang/rebatedog:latest",
     container_install = container_install
   }
