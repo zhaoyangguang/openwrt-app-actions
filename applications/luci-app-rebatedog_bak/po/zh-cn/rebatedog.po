@@ -1,0 +1,35 @@
+msgid "Rebatedog"
+msgstr "旺财狗"
+
+msgid "Rebatedog is running"
+msgstr "旺财狗已启动"
+
+msgid "Rebatedog is not running"
+msgstr "旺财狗服务未启动"
+
+msgid "The rebatedog service is not installed."
+msgstr "旺财狗服务未安装"
+
+msgid "Open Rebatedog"
+msgstr "打开旺财狗"
+
+msgid "Stop Rebatedog"
+msgstr "停止旺财狗"
+
+msgid "Run Rebatedog"
+msgstr "启动旺财狗"
+
+msgid "Uninstall Rebatedog"
+msgstr "删除旺财狗"
+
+msgid "Install Rebatedog"
+msgstr "安装旺财狗"
+
+msgid "Collecting data..."
+msgstr "收集数据..."
+
+msgid "storage path"
+msgstr "存储路径（建议插入U盘或硬盘，然后输入路径。例如：/mnt/sda1/rebatedog）"
+
+msgid "Storage path could not be empty!"
+msgstr "存储路径不能为空！"

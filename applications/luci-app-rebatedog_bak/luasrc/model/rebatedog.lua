@@ -36,14 +36,14 @@ rebatedog.find_paths = function(blocks, home_dirs, path_name)
   local default_path = ''
   local configs = {}
 
-  default_path = home_dirs[path_name] .. "/Rebatedog"
+  default_path = home_dirs[path_name] .. "/RebateDog"
   if #blocks == 0 then
     table.insert(configs, default_path)
   else
     for _, val in pairs(blocks) do 
-      table.insert(configs, val .. "/" .. path_name .. "/Rebatedog")
+      table.insert(configs, val .. "/" .. path_name .. "/RebateDog")
     end
-    local without_conf_dir = "/root/" .. path_name .. "/Rebatedog"
+    local without_conf_dir = "/root/" .. path_name .. "/RebateDog"
     if default_path == without_conf_dir then
       default_path = configs[1]
     end

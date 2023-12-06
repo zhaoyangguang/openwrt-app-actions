@@ -1,4 +1,7 @@
 config rebatedog
-	option 'image' 'zhaoyangguang/rebatedog:latest'
-	option 'data_path' ''
+	option 'image' 'default'
+	option 'hostnet' '0'
 	option 'port' '15888'
+	option 'media_path' ''
+	option 'config_path' ''
+	option 'cache_path' ''

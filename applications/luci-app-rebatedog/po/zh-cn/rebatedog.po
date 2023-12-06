@@ -1,35 +1,47 @@
-msgid "Rebatedog"
-msgstr "旺财狗"
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Official website:"
+msgstr "官方网站："
+
+msgid "Rebatedog is a multi platform system for TaoKe."
+msgstr "旺财狗是一款跨平台的淘客发单系统。"
+
+msgid "Config path"
+msgstr "配置文件路径"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "Host network"
+msgstr "宿主网络"
+
+msgid "Rebatedog running in host network, port is always 15888 if enabled"
+msgstr "在宿主网络运行旺财狗，如果启用则端口固定为15888"
+
+msgid "Service Status"
+msgstr "服务状态"
+
+msgid "Rebatedog status:"
+msgstr "旺财狗的状态信息如下："
+
+msgid "Setup"
+msgstr "安装配置"
+
+msgid "Please make sure that the Docker data directory has enough space. It is recommended to migrate Docker to a hard drive before installing Rebatedog."
+msgstr "请确保 Docker 数据目录有足够空间。建议安装旺财狗前将 Docker 迁移到硬盘上。"
+
+msgid "The following parameters will only take effect during installation or upgrade:"
+msgstr "以下参数只在安装或者升级时才会生效："
+
+msgid "Status"
+msgstr "状态"
 
 msgid "Rebatedog is running"
-msgstr "旺财狗已启动"
+msgstr "旺财狗运行中"
 
 msgid "Rebatedog is not running"
-msgstr "旺财狗服务未启动"
-
-msgid "The rebatedog service is not installed."
-msgstr "旺财狗服务未安装"
+msgstr "旺财狗未运行"
 
 msgid "Open Rebatedog"
 msgstr "打开旺财狗"
-
-msgid "Stop Rebatedog"
-msgstr "停止旺财狗"
-
-msgid "Run Rebatedog"
-msgstr "启动旺财狗"
-
-msgid "Uninstall Rebatedog"
-msgstr "删除旺财狗"
-
-msgid "Install Rebatedog"
-msgstr "安装旺财狗"
-
-msgid "Collecting data..."
-msgstr "收集数据..."
-
-msgid "storage path"
-msgstr "存储路径（建议插入U盘或硬盘，然后输入路径。例如：/mnt/sda1/rebatedog）"
-
-msgid "Storage path could not be empty!"
-msgstr "存储路径不能为空！"
