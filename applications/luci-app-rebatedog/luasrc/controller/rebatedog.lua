@@ -21,7 +21,7 @@ local rebatedog_model = require "luci.model.rebatedog"
 local blocks = rebatedog_model.blocks()
 local home = rebatedog_model.home()
 
-local default_path = rebatedog_model.find_paths(blocks, home, "DogData")
+local default_path = rebatedog_model.find_paths(blocks, home, "Configs")
 
 
 function redirect_index()
